@@ -31,7 +31,7 @@ class RainboltParody:
 
             response = client.models.generate_content(
                 model="gemini-2.5-flash",
-                ontents=[SYSTEM_PROMPT, img]
+                contents=[SYSTEM_PROMPT, img]
             )
 
             if (response.text != "" or response.text is not None) and type(response.text) == str:
