@@ -11,7 +11,7 @@ from rich.table import Table
 
 console = Console()
 
-class RainboltParady:
+class RainboltParody:
     def __init__(self, title: str, api_key: str):
         self.title = title
         self.api_key = api_key
