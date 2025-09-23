@@ -5,7 +5,7 @@ from typing import  Tuple, Dict
 import PIL
 from PIL import Image
 from google import genai
-from google.colab import files
+# from google.colab import files
 from rich.console import Console
 from rich.table import Table
 
@@ -16,14 +16,14 @@ class RainboltParody:
         self.title = title
         self.api_key = api_key
 
-    def upload_image(self) -> PIL.PngImagePlugin.PngImageFile:
-        uploaded = files.upload()
+    # def upload_image(self) -> PIL.PngImagePlugin.PngImageFile:
+    #     uploaded = files.upload()
 
-        for filename in uploaded.keys():
-            img = Image.open(BytesIO(uploaded[filename]))
-            print(f"Uploaded and opened: {filename}")
+    #     for filename in uploaded.keys():
+    #         img = Image.open(BytesIO(uploaded[filename]))
+    #         print(f"Uploaded and opened: {filename}")
 
-        return img
+    #     return img
 
     def get_info(self, SYSTEM_PROMPT: str, img: PIL.PngImagePlugin.PngImageFile) -> Tuple[Dict[str, str], str, str]:
         try:
